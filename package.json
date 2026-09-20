@@ -1,0 +1,42 @@
+{
+  "name": "@theshado40/ledger-reconcile",
+  "version": "0.1.0",
+  "description": "Deterministic, tenant-safe payment allocation for TypeScript applications.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc --noEmit",
+    "test": "node --import tsx --test tests/**/*.test.ts",
+    "verify": "npm run check && npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theshado40/ledger-reconcile.git"
+  },
+  "keywords": [
+    "accounting",
+    "allocation",
+    "multi-tenant",
+    "payments",
+    "reconciliation",
+    "typescript"
+  ]
+}
